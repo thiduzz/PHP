@@ -14,7 +14,7 @@ class ConnectionAdapter {
         $mysql_connected = false;
         $pruser = "";
         for ($i = 1; $i <= 5; $i++) {
-            if ($con = mysqli_connect("192.168.1.4", "thiago.mello", "test")) {
+            if ($con = mysqli_connect("", "thiago.mello", "")) {
                 return $con;
             } else {
                 if ($i == 5)
@@ -31,7 +31,7 @@ class ConnectionAdapter {
     
     public function connect_dibi(){
                 try {
-                dibi::connect('driver=mysql&host=192.168.1.4&username=thiago.mello&password=test&database=thiago&charset=cp1250');
+                dibi::connect('driver=xxx&username=xxx&password=xxx&database=xxx&charset=cp1250');
                 echo 'OK';
 
         } catch (DibiException $e) {
